@@ -1,51 +1,51 @@
-state,x,y
-Alabama,139,-77
-Alaska,-204,-170
-Arizona,-203,-40
-Arkansas,57,-53
-California,-297,13
-Colorado,-112,20
-Connecticut,297,96
-Delaware,275,42
-Florida,220,-145
-Georgia,182,-75
-Hawaii,-317,-143
-Idaho,-216,122
-Illinois,95,37
-Indiana,133,39
-Iowa,38,65
-Kansas,-17,5
-Kentucky,149,1
-Louisiana,59,-114
-Maine,319,164
-Maryland,288,27
-Massachusetts,312,112
-Michigan,148,101
-Minnesota,23,135
-Mississippi,94,-78
-Missouri,49,6
-Montana,-141,150
-Nebraska,-61,66
-Nevada,-257,56
-New Hampshire,302,127
-New Jersey,282,65
-New Mexico,-128,-43
-New York,236,104
-North Carolina,239,-22
-North Dakota,-44,158
-Ohio,176,52
-Oklahoma,-8,-41
-Oregon,-278,138
-Pennsylvania,238,72
-Rhode Island,318,94
-South Carolina,218,-51
-South Dakota,-44,109
-Tennessee,131,-34
-Texas,-38,-106
-Utah,-189,34
-Vermont,282,154
-Virginia,234,12
-Washington,-257,193
-West Virginia,200,20
-Wisconsin,83,113
-Wyoming,-134,90
+state,x,y,capitol
+Alabama,139,-77,Montgomery 
+Alaska,-204,-170,Juneau 
+Arizona,-203,-40,Phoenix
+Arkansas,57,-53,Little Rock
+California,-297,13,Sacramento
+Colorado,-112,20,Denver
+Connecticut,297,96,Hartford
+Delaware,275,42,Dover
+Florida,220,-145,Tallahassee
+Georgia,182,-75,Atlanta
+Hawaii,-317,-143,Honolulu
+Idaho,-216,122,Boise
+Illinois,95,37,Springfield
+Indiana,133,39,Indianapolis
+Iowa,38,65,Des Moines
+Kansas,-17,5,Topeka
+Kentucky,149,1,Frankfort
+Louisiana,59,-114,Baton Rouge
+Maine,319,164,Augusta
+Maryland,288,27,Annapolis
+Massachusetts,312,112,Boston
+Michigan,148,101,Lansing
+Minnesota,23,135,St. Paul
+Mississippi,94,-78,Jackson
+Missouri,49,6,Jefferson City
+Montana,-141,150,Helena
+Nebraska,-61,66,Lincoln
+Nevada,-257,56,Carson City
+New Hampshire,302,127,Concord
+New Jersey,282,65,Trenton
+New Mexico,-128,-43,Santa Fe
+New York,236,104,Albany
+North Carolina,239,-22,Raleigh
+North Dakota,-44,158,Bismarck
+Ohio,176,52,Columbus
+Oklahoma,-8,-41,Oklahoma City
+Oregon,-278,138,Salem
+Pennsylvania,238,72,Harrisburg
+Rhode Island,318,94,Providence
+South Carolina,218,-51,Columbia
+South Dakota,-44,109,Pierre
+Tennessee,131,-34,Nashville
+Texas,-38,-106,Austin
+Utah,-189,34,Salt Lake City
+Vermont,282,134,Montpelier
+Virginia,234,12,Richmond
+Washington,-257,193,Olympia
+West Virginia,200,20,Charleston
+Wisconsin,83,113,Madison
+Wyoming,-134,90,Cheyenne
