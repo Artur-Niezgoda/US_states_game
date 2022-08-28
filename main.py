@@ -14,17 +14,43 @@ turtle.shape(IMAGE_PATH)
 
 # Read data
 data = pd.read_csv("50_states.csv")
-guessed = []
+guessed_states = []
+guessed_capitols = []
 
-while len(guessed) < 50:
-    answer = screen.textinput(title=f"({len(guessed)}/50) states correct.",
+# Part of the game where user gives names of the states
+while len(guessed_states) < 50:
+    answer = screen.textinput(title=f"({len(guessed_states)}/50) states correct.",
                               prompt="What's another state's name?").title()
     if answer in ["Quit", "Q", "Exit"]:
         break
     if answer in data["state"].unique():
         row = data.loc[data.state == answer]
         state_name.add_name(row.state.item(), row["x"].values[0], row["y"].values[0])
-        guessed.append(row.state.item())
+        guessed_states.append(row.state.item())
 
-states_to_learn = data[~data.state.isin(guessed)].state
+# Part of the game where user tries to give names of the capitols of the previously provided correct names of the states
+for i in range(len(guessed_states)):
+    name = guessed_states[i]
+    row = data.loc[data.state == name]
+
+    answer = screen.textinput(title=f"({len(guessed_capitols)}/{len(guessed_states)}) state's capitols correct.",
+                              prompt=f"What's capitol of {row.state.item()}?").title()
+    if answer in ["Quit", "Q", "Exit"]:
+        break
+    if answer == row.capitol.item():
+        state_name.states_list[i].clear()
+        state_name.add_name(row.state.item(), row["x"].values[0], row["y"].values[0], color="green")
+        guessed_capitols.append(answer.title())
+    else:
+        state_name.states_list[i].clear()
+        state_name.add_name(row.state.item(), row["x"].values[0], row["y"].values[0], color="red")
+
+# Create DataFrame of the list of the missed states and capitols
+states_to_learn = data[~data.state.isin(guessed_states)].state
+capitols_to_learn = data[~data.capitol.isin(guessed_capitols)][['state', 'capitol']]
+
+# Save DataFrames to csv files
 states_to_learn.to_csv("states_still_to_learn.csv")
+capitols_to_learn.to_csv("capitols_still_to_learn.csv")
+
+screen.exitonclick()
