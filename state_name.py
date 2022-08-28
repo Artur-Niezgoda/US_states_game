@@ -38,5 +38,5 @@ class StateName:
         new_name.penup()
         new_name.hideturtle()
         new_name.goto((x, y))
-        new_name.write(name.capitalize())
+        new_name.write(name.title())
         self.states_list.append(new_name)

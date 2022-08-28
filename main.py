@@ -23,9 +23,9 @@ while len(guessed_states) < 50:
                               prompt="What's another state's name?").title()
     if answer in ["Quit", "Q", "Exit"]:
         break
-    if answer in data["state"].unique():
+    if answer in data["state"].unique() and answer not in guessed_states:
         row = data.loc[data.state == answer]
-        state_name.add_name(row.state.item(), row["x"].values[0], row["y"].values[0])
+        state_name.add_name(row.state.item(), row.x.item(), row.y.item())
         guessed_states.append(row.state.item())
 
 # Part of the game where user tries to give names of the capitols of the previously provided correct names of the states
@@ -39,11 +39,11 @@ for i in range(len(guessed_states)):
         break
     if answer == row.capitol.item():
         state_name.states_list[i].clear()
-        state_name.add_name(row.state.item(), row["x"].values[0], row["y"].values[0], color="green")
-        guessed_capitols.append(answer.title())
+        state_name.add_name(row.state.item(), row.x.item(), row.y.item(), color="green")
+        guessed_capitols.append(answer)
     else:
         state_name.states_list[i].clear()
-        state_name.add_name(row.state.item(), row["x"].values[0], row["y"].values[0], color="red")
+        state_name.add_name(row.state.item(), row.x.item(), row.y.item(), color="red")
 
 # Create DataFrame of the list of the missed states and capitols
 states_to_learn = data[~data.state.isin(guessed_states)].state
